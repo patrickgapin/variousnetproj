@@ -1,0 +1,20 @@
+C:\src\samples\net\variousTests\AngularJS - Hello\bin\roslyn\csc.exe
+C:\src\samples\net\variousTests\AngularJS - Hello\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\src\samples\net\variousTests\AngularJS - Hello\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\src\samples\net\variousTests\AngularJS - Hello\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\src\samples\net\variousTests\AngularJS - Hello\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\src\samples\net\variousTests\AngularJS - Hello\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\src\samples\net\variousTests\AngularJS - Hello\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\src\samples\net\variousTests\AngularJS - Hello\bin\roslyn\System.Collections.Immutable.dll
+C:\src\samples\net\variousTests\AngularJS - Hello\bin\roslyn\System.Reflection.Metadata.dll
+C:\src\samples\net\variousTests\AngularJS - Hello\bin\roslyn\vbc.exe
+C:\src\samples\net\variousTests\AngularJS - Hello\bin\roslyn\VBCSCompiler.exe
+C:\src\samples\net\variousTests\AngularJS - Hello\bin\roslyn\VBCSCompiler.exe.config
+C:\src\samples\net\variousTests\AngularJS - Hello\bin\AngularJS - Hello.dll.config
+C:\src\samples\net\variousTests\AngularJS - Hello\bin\AngularJS - Hello.dll
+C:\src\samples\net\variousTests\AngularJS - Hello\bin\AngularJS - Hello.pdb
+C:\src\samples\net\variousTests\AngularJS - Hello\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\src\samples\net\variousTests\AngularJS - Hello\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\src\samples\net\variousTests\AngularJS - Hello\obj\Debug\AngularJS - Hello.csprojResolveAssemblyReference.cache
+C:\src\samples\net\variousTests\AngularJS - Hello\obj\Debug\AngularJS - Hello.dll
+C:\src\samples\net\variousTests\AngularJS - Hello\obj\Debug\AngularJS - Hello.pdb

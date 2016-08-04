@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<script src="/controllers/root.js"></script>
+<script src="/Scripts/angular.js"></script>
+
+<html ng-app="root">
+    <body ng-controller="index">
+        <div >{{message}} {{city}}, We are live!</div>{}
+
+        <div> <!--Repeaters-->
+            <table>
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>Name</td>
+                    </tr>
+                </thead>
+                <tr ng-repeat="product in products">
+                    <td>{{product.id}}</td>
+                    <td>{{product.name}}</td>
+                </tr>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div> <!--Css binding-->
+            <input type="text" ng-model="value" />
+            <span ng-class="{bold: isBold(), italic: isItalic(), underline: isUnderlined()}">Example Text</span>
+        </div>
+
+        <div><!--2 ways binding-->
+            <div>
+                Favorite word: <input type="text" ng-model="favoriteWord"/>
+                {{favoriteWord}}
+            </div>
+            <div>
+                Favorite color:
+                <input type="radio" name="fc" value="Red" ng-model="favoriteColor">Red</input>
+                <input type="radio" name="fc" value="Green" ng-model="favoriteColor">Green</input>
+                <input type="radio" name="fc" value="Yellow" ng-model="favoriteColor">Yellow</input>
+                <input type="radio" name="fc" value="Blue" ng-model="favoriteColor">Blue</input>
+                {{favoriteColor}}
+            </div>
+            <div>
+                Favorite shape:
+                <select ng-model="favoriteShape">
+                    <option value="Circle">Circle</option>
+                    <option value="Triangle">Triangle</option>
+                    <option value="Square">Square</option>
+                </select>
+                {{favoriteShape}}
+            </div>
+        </div>
+
+        <!--Visibility: ng0-show / ng-shide/ ng-if-->
+        <div>
+            <input type="text" ng-model="message" /> {{message}}
+            <div ng-hide="true">
+                <input type="text" ng-model="message" /> {{message}}
+            </div>
+
+    </body>
+
+
+</html>

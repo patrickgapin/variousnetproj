@@ -1,0 +1,12 @@
+C:\src\samples\net\variousTests\variousTests\VariousTests\Automapper\bin\Debug\Automapper.exe.config
+C:\src\samples\net\variousTests\variousTests\VariousTests\Automapper\bin\Debug\Automapper.exe
+C:\src\samples\net\variousTests\variousTests\VariousTests\Automapper\bin\Debug\Automapper.pdb
+C:\src\samples\net\variousTests\variousTests\VariousTests\Automapper\bin\Debug\AutoMapper.xml
+C:\src\samples\net\variousTests\variousTests\VariousTests\Automapper\obj\Debug\Automapper.csprojResolveAssemblyReference.cache
+C:\src\samples\net\variousTests\variousTests\VariousTests\Automapper\obj\Debug\Automapper.exe
+C:\src\samples\net\variousTests\variousTests\VariousTests\Automapper\obj\Debug\Automapper.pdb
+C:\src\samples\net\variousTests\variousTests\VariousTests\Automapper\bin\Debug\Model.dll
+C:\src\samples\net\variousTests\variousTests\VariousTests\Automapper\bin\Debug\Model.pdb
+C:\src\samples\net\variousTests\Automapper\bin\Debug\Automapper.exe.config
+C:\src\samples\net\variousTests\Automapper\obj\Debug\Automapper.exe
+C:\src\samples\net\variousTests\Automapper\obj\Debug\Automapper.pdb

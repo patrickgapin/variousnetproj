@@ -1,0 +1,19 @@
+C:\src\samples\net\variousTests\variousTests\VariousTests\Simple Injector\bin\Debug\Simple Injector.exe.config
+C:\src\samples\net\variousTests\variousTests\VariousTests\Simple Injector\obj\Debug\Simple Injector.csprojResolveAssemblyReference.cache
+C:\src\samples\net\variousTests\variousTests\VariousTests\Simple Injector\bin\Debug\Simple Injector.exe
+C:\src\samples\net\variousTests\variousTests\VariousTests\Simple Injector\bin\Debug\Simple Injector.pdb
+C:\src\samples\net\variousTests\variousTests\VariousTests\Simple Injector\bin\Debug\Model.dll
+C:\src\samples\net\variousTests\variousTests\VariousTests\Simple Injector\bin\Debug\Model.pdb
+C:\src\samples\net\variousTests\variousTests\VariousTests\Simple Injector\bin\Debug\SimpleInjector.xml
+C:\src\samples\net\variousTests\variousTests\VariousTests\Simple Injector\obj\Debug\Simple Injector.exe
+C:\src\samples\net\variousTests\variousTests\VariousTests\Simple Injector\obj\Debug\Simple Injector.pdb
+C:\src\samples\net\variousTests\Simple Injector\bin\Debug\Simple Injector.exe.config
+C:\src\samples\net\variousTests\Simple Injector\bin\Debug\Simple Injector.exe
+C:\src\samples\net\variousTests\Simple Injector\bin\Debug\Simple Injector.pdb
+C:\src\samples\net\variousTests\Simple Injector\bin\Debug\Model.dll
+C:\src\samples\net\variousTests\Simple Injector\bin\Debug\SimpleInjector.dll
+C:\src\samples\net\variousTests\Simple Injector\bin\Debug\Model.pdb
+C:\src\samples\net\variousTests\Simple Injector\bin\Debug\SimpleInjector.xml
+C:\src\samples\net\variousTests\Simple Injector\obj\Debug\Simple Injector.csprojResolveAssemblyReference.cache
+C:\src\samples\net\variousTests\Simple Injector\obj\Debug\Simple Injector.exe
+C:\src\samples\net\variousTests\Simple Injector\obj\Debug\Simple Injector.pdb

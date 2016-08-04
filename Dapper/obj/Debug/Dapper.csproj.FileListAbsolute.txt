@@ -1,0 +1,1 @@
+C:\src\samples\net\variousTests\variousTests\VariousTests\Dapper\bin\Debug\Dapper.exe.config

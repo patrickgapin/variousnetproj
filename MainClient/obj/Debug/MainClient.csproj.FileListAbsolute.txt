@@ -1,0 +1,8 @@
+C:\src\samples\net\variousTests\variousTests\VariousTests\MainClient\bin\Debug\MainClient.exe.config
+C:\src\samples\net\variousTests\variousTests\VariousTests\MainClient\bin\Debug\MainClient.exe
+C:\src\samples\net\variousTests\variousTests\VariousTests\MainClient\bin\Debug\MainClient.pdb
+C:\src\samples\net\variousTests\variousTests\VariousTests\MainClient\bin\Debug\Design Patterns.dll
+C:\src\samples\net\variousTests\variousTests\VariousTests\MainClient\bin\Debug\Design Patterns.pdb
+C:\src\samples\net\variousTests\variousTests\VariousTests\MainClient\obj\Debug\MainClient.csprojResolveAssemblyReference.cache
+C:\src\samples\net\variousTests\variousTests\VariousTests\MainClient\obj\Debug\MainClient.exe
+C:\src\samples\net\variousTests\variousTests\VariousTests\MainClient\obj\Debug\MainClient.pdb
