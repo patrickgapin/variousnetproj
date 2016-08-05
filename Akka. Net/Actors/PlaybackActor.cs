@@ -1,8 +1,8 @@
 ﻿using System;
 using Akka.Actor;
-using Akka.Net.Messages;
+using MovieStreaming.Messages;
 
-namespace Akka.Net
+namespace MovieStreaming.Actors
 {
     public class PlaybackActor : UntypedActor
     {

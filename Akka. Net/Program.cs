@@ -1,9 +1,11 @@
 ﻿using Akka.Actor;
-using Akka.Net.Messages;
+using MovieStreaming.Actors;
+using MovieStreaming.Messages;
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 
-namespace Akka.Net
+namespace MovieStreaming
 {
     class Program
     {
@@ -12,20 +14,31 @@ namespace Akka.Net
 
         static void Main(string[] args)
         {
-            ManageUntypeActor();
-            ManageReceiveActor();
+            StartSystem();
+            //ManageUntypeActor();
+            ManageActors();
 
-            PrintEmptyLines();
+            //PrintEmptyLines();
 
-            Console.ReadLine();
+            // press enter to shutdown the system
+            Console.ReadKey();
 
             TerminateActorSystem();
+
+            
+            // press enter to stop console application
+            Console.ReadKey();
+        }
+
+        private static void StartSystem()
+        {
+            MovieStreamingActorSystem = ActorSystem.Create(ActorName);
+            Console.WriteLine("Actor system created");
         }
 
         private static void ManageUntypeActor()
         {
-            MovieStreamingActorSystem = ActorSystem.Create(ActorName);
-            Console.WriteLine("Actor system created");
+
 
             var playbackActorProps = Props.Create<PlaybackActor>();
 
@@ -38,19 +51,47 @@ namespace Akka.Net
             playbackActorReference.Tell(playMovieMessage);            
         }
 
-        private static void ManageReceiveActor()
+        private static void ManageActors()
         {
             var receivePlaybackActorProps = Props.Create<ReceivePlaybackActor>();
             var receivePlaybackActorReference = MovieStreamingActorSystem.ActorOf(receivePlaybackActorProps, "ReceivePlaybackActor");
-            var otherMessage = new PlayMovieMessage("My Movie", 56);
-            receivePlaybackActorReference.Tell(otherMessage);
 
-            receivePlaybackActorReference.Tell(new PlayMovieMessage("Movie 42", 42));
+            var userActorProps = Props.Create<UserActor>();
+            var userActorReference = MovieStreamingActorSystem.ActorOf(userActorProps, "UserActor");
+
+            //receivePlaybackActorReference.Tell(PoisonPill.Instance);
+            Console.ReadKey();
+            Console.WriteLine("Sending a PlayMovieMessage (Africa: The Return)");
+            userActorReference.Tell(new PlayMovieMessage("Africa: The Return", 56));
+
+            Console.ReadKey();
+            Console.WriteLine("Sending a PlayMovieMessage (Children are Love)");
+            userActorReference.Tell(new PlayMovieMessage("Children are Love", 42));
+            //receivePlaybackActorReference.Tell(new PlayMovieMessage("Why do that", 146));
+            //receivePlaybackActorReference.Tell(new PlayMovieMessage("One is Great", 1));
+
+            Console.ReadKey();
+            Console.WriteLine("Sending a StopMovieMessage");
+            userActorReference.Tell(new StopMovieMessage());
+
+            Console.ReadKey();
+            Console.WriteLine("Sending another StopMovieMessage");
+            userActorReference.Tell(new StopMovieMessage());
         }
+
 
         private static void TerminateActorSystem()
         {
             MovieStreamingActorSystem.Terminate();
+
+            MovieStreamingActorSystem.AwaitTermination();
+            Console.WriteLine("Actor System shutown");
+            //MovieStreamingActorSystem.WhenTerminated. = new Task(SystemIsTerminated);
+        }
+
+        private static void SystemIsTerminated()
+        {
+            Console.WriteLine("Actor System shutown");
         }
 
         private static void PrintEmptyLines()

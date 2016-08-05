@@ -6,3 +6,11 @@ C:\src\samples\net\variousTests\variousTests\VariousTests\MainClient\bin\Debug\M
 C:\src\samples\net\variousTests\variousTests\VariousTests\MainClient\bin\Debug\MainClient.pdb
 C:\src\samples\net\variousTests\variousTests\VariousTests\MainClient\bin\Debug\Design Patterns.dll
 C:\src\samples\net\variousTests\variousTests\VariousTests\MainClient\bin\Debug\Design Patterns.pdb
+C:\src\samples\net\variousTests\MainClient\bin\Debug\MainClient.exe.config
+C:\src\samples\net\variousTests\MainClient\bin\Debug\MainClient.exe
+C:\src\samples\net\variousTests\MainClient\bin\Debug\MainClient.pdb
+C:\src\samples\net\variousTests\MainClient\bin\Debug\Design Patterns.dll
+C:\src\samples\net\variousTests\MainClient\bin\Debug\Design Patterns.pdb
+C:\src\samples\net\variousTests\MainClient\obj\Debug\Sandbox.csprojResolveAssemblyReference.cache
+C:\src\samples\net\variousTests\MainClient\obj\Debug\MainClient.exe
+C:\src\samples\net\variousTests\MainClient\obj\Debug\MainClient.pdb

@@ -1,4 +1,4 @@
-﻿namespace Akka.Net.Messages
+﻿namespace MovieStreaming.Messages
 {
     public class PlayMovieMessage
     {

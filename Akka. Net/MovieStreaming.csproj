@@ -7,8 +7,8 @@
     <ProjectGuid>{0583BBD4-B792-45EC-8C92-CBCED8193908}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Akka.Net</RootNamespace>
-    <AssemblyName>Akka.Net</AssemblyName>
+    <RootNamespace>MovieStreaming</RootNamespace>
+    <AssemblyName>MovieStreaming</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -55,8 +55,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actors\UserActor.cs" />
     <Compile Include="Actors\ReceivePlaybackActor .cs" />
     <Compile Include="Actors\PlaybackActor.cs" />
+    <Compile Include="ColorConsole.cs" />
+    <Compile Include="Messages\StopMovieMessage.cs" />
     <Compile Include="Messages\PlayMovieMessage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
