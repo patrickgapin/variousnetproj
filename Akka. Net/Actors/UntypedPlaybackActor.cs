@@ -4,9 +4,9 @@ using MovieStreaming.Messages;
 
 namespace MovieStreaming.Actors
 {
-    public class PlaybackActor : UntypedActor
+    public class UntypePlaybackActor : UntypedActor
     {
-        public PlaybackActor()
+        public UntypePlaybackActor()
         {
             Console.WriteLine("Creating a PlaybackActor");
         }

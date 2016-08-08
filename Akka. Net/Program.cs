@@ -1,59 +1,103 @@
 ﻿using Akka.Actor;
 using MovieStreaming.Actors;
+using MovieStreaming.Helpers;
 using MovieStreaming.Messages;
 using System;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace MovieStreaming
 {
     class Program
     {
         private static ActorSystem MovieStreamingActorSystem;
-        private const string ActorName = "MovieStreamActorSystem";
 
         static void Main(string[] args)
         {
             StartSystem();
-            //ManageUntypeActor();
-            ManageActors();
+            // ManageUntypeActor();
 
-            //PrintEmptyLines();
+            // Use [ManageActors()] to manage actors.
+            // ManageActors();
+
+            ManageHieararchy();
+
+            // PrintEmptyLines();
 
             // press enter to shutdown the system
-            Console.ReadKey();
+            //Console.ReadKey();
 
-            TerminateActorSystem();
+            //TerminateActorSystem();
 
-            
             // press enter to stop console application
-            Console.ReadKey();
+            //Console.ReadKey();
         }
 
         private static void StartSystem()
         {
-            MovieStreamingActorSystem = ActorSystem.Create(ActorName);
-            Console.WriteLine("Actor system created");
+            ColorConsole.WriteLineGray("Creating MovieStreamActorSystem");
+            MovieStreamingActorSystem = ActorSystem.Create(Constants.MovieStreamActorSystem);
         }
 
         private static void ManageUntypeActor()
         {
 
 
-            var playbackActorProps = Props.Create<PlaybackActor>();
+            var playbackActorProps = Props.Create<UntypePlaybackActor>();
 
-            var playbackActorReference = MovieStreamingActorSystem.ActorOf(playbackActorProps, "PlaybackActor");            
+            var playbackActorReference = MovieStreamingActorSystem.ActorOf(playbackActorProps, "PlaybackActor");
             playbackActorReference.Tell("Akka.NET: The Movie");
             playbackActorReference.Tell(42);
             playbackActorReference.Tell('c');
 
             var playMovieMessage = new PlayMovieMessage("My Movie", 56);
-            playbackActorReference.Tell(playMovieMessage);            
+            playbackActorReference.Tell(playMovieMessage);
+        }
+
+        private static void ManageHieararchy()
+        {
+            ColorConsole.WriteLineGray("Creating actor supervisor hierarchy");
+            var playbackActorReference = Props.Create<PlaybackActor>();
+            MovieStreamingActorSystem.ActorOf(playbackActorReference, Constants.ActorsNames.Playback);            
+
+            do
+            {
+                //ShortPause();
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.White;
+                ColorConsole.WriteLineGray("Enter a command (play/stop/exit) and hit Enter");
+                var command = Console.ReadLine();
+
+                if (command.StartsWith(Constants.Commands.Play, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    var userId = int.Parse(command.Split(',')[1]);
+                    var movieTitle = command.Split(',')[2];
+                    var message = new PlayMovieMessage(movieTitle, userId);
+                    MovieStreamingActorSystem.ActorSelection(Constants.ActorsSelectionPaths.UserCoordinator).Tell(message);
+                }
+
+                if (command.StartsWith(Constants.Commands.Stop, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    var userId = int.Parse(command.Split(',')[1]);
+                    var message = new StopMovieMessage(userId);
+                    MovieStreamingActorSystem.ActorSelection(Constants.ActorsSelectionPaths.UserCoordinator).Tell(message);
+                }
+                if (command.StartsWith(Constants.Commands.Exit, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    TerminateActorSystem();
+                    Console.ReadKey();
+                    Environment.Exit(1);
+                }
+            } while (true);
+        }
+
+        private void ShortPause()
+        {
+            throw new NotImplementedException();
         }
 
         private static void ManageActors()
         {
-            var receivePlaybackActorProps = Props.Create<ReceivePlaybackActor>();
+            var receivePlaybackActorProps = Props.Create<PlaybackActor>();
             var receivePlaybackActorReference = MovieStreamingActorSystem.ActorOf(receivePlaybackActorProps, "ReceivePlaybackActor");
 
             var userActorProps = Props.Create<UserActor>();
@@ -78,7 +122,6 @@ namespace MovieStreaming
             Console.WriteLine("Sending another StopMovieMessage");
             userActorReference.Tell(new StopMovieMessage());
         }
-
 
         private static void TerminateActorSystem()
         {

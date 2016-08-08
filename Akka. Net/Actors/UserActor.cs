@@ -1,6 +1,7 @@
 ﻿using System;
 using Akka.Actor;
 using MovieStreaming.Messages;
+using MovieStreaming.Helpers;
 
 namespace MovieStreaming.Actors
 {
@@ -10,9 +11,12 @@ namespace MovieStreaming.Actors
     public class UserActor : ReceiveActor
     {
         private string currentlyWatching;
+        public int UserID { get; private set; }
 
-        public UserActor()
+        public UserActor(int userID)
         {
+            UserID = userID;
+
             Console.WriteLine("Creating a UserActor");
 
             ColorConsole.WriteLineCyan("Setting initial behavior to stopped");
@@ -27,8 +31,7 @@ namespace MovieStreaming.Actors
             // Defines what happens when we receive a StopMovieMessage while we are in a Playing state.
             Receive<StopMovieMessage>(message => StopPlayingCurrentMovie());
 
-            ColorConsole.WriteLineCyan("UserActor has now become Playing");
-            Console.WriteLine();
+            ColorConsole.WriteLineYellow("UserActor {0} has now become Playing", UserID.ToString());
         }
 
         private void Stopped()
@@ -40,15 +43,16 @@ namespace MovieStreaming.Actors
             Receive<StopMovieMessage>(message =>            
                 ColorConsole.WriteLineRed("Error: cannot stop if nothing is playing")
             );
-
-            ColorConsole.WriteLineCyan("UserActor has now become Stopped");
-            Console.WriteLine();
+            
+            ColorConsole.WriteLineYellow("UserActor {0} has now become Stopped", UserID);            
         }
 
         private void StartPlayingMovie(string movieTitle)
         {
             currentlyWatching = movieTitle;
-            ColorConsole.WriteLineYellow(string.Format("User is currently watching {0}", currentlyWatching));
+            ColorConsole.WriteLineYellow("User {0} is currently watching {1}", UserID, currentlyWatching);
+
+            Context.ActorSelection(Constants.ActorsSelectionPaths.MoviePlayCounter).Tell(new IncrementPlayCountMessage(movieTitle));
 
             // Switch Actor behavior from 'Stopped' to 'Playing'
             Become(Playing);
@@ -56,26 +60,26 @@ namespace MovieStreaming.Actors
 
         private void StopPlayingCurrentMovie()
         {
-            ColorConsole.WriteLineYellow(string.Format("User has stoppped watching {0}", currentlyWatching));
+            ColorConsole.WriteLineYellow("User {0} has stoppped watching {1}", UserID, currentlyWatching);
             currentlyWatching = null;
 
             // Switch Actor behavior from 'Playing' to 'Stopped'
             Become(Stopped);
         }
 
-        protected override void PreStart() { ColorConsole.WriteLineGreen("UserActor PreStart"); }
+        protected override void PreStart() { ColorConsole.WriteLineYellow("UserActor {0} PreStart", UserID); }
 
-        protected override void PostStop() { ColorConsole.WriteLineGreen("UserActor PostStop"); }
+        protected override void PostStop() { ColorConsole.WriteLineYellow("UserActor {0} PostStop", UserID); }
 
         protected override void PreRestart(Exception reason, object message)
-        {
-            ColorConsole.WriteLineGreen("UserActor PreRestart because: " + reason);
+        {            
+            ColorConsole.WriteLineGreen("UserActor {0} PreRestart because exception of type '{1}' was thrown: ", UserID, reason.GetType());
             base.PreRestart(reason, message);
         }
 
         protected override void PostRestart(Exception reason)
-        {
-            ColorConsole.WriteLineGreen("UserActor PostRestart because: " + reason);
+        {            
+            ColorConsole.WriteLineGreen("UserActor {0} PostRestart because exception of type '{1}' was thrown: ", UserID, reason.GetType());
             base.PostRestart(reason);
         }
     }
