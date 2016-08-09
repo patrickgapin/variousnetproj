@@ -12,8 +12,6 @@ C:\src\samples\net\variousTests\variousTests\VariousTests\Dapper\bin\Debug\Fluen
 C:\src\samples\net\variousTests\variousTests\VariousTests\Dapper\obj\Debug\Dapper.exe
 C:\src\samples\net\variousTests\variousTests\VariousTests\Dapper\obj\Debug\Dapper.pdb
 C:\src\samples\net\variousTests\Dapper\bin\Debug\Dapper.exe.config
-C:\src\samples\net\variousTests\Dapper\obj\Debug\Dapper.exe
-C:\src\samples\net\variousTests\Dapper\obj\Debug\Dapper.pdb
 C:\src\samples\net\variousTests\Dapper\bin\Debug\Dapper.exe
 C:\src\samples\net\variousTests\Dapper\bin\Debug\Dapper.pdb
 C:\src\samples\net\variousTests\Dapper\bin\Debug\Dapper.dll
@@ -27,3 +25,5 @@ C:\src\samples\net\variousTests\Dapper\bin\Debug\FluentAssertions.xml
 C:\src\samples\net\variousTests\Dapper\bin\Debug\FluentAssertions.Core.pdb
 C:\src\samples\net\variousTests\Dapper\bin\Debug\FluentAssertions.Core.xml
 C:\src\samples\net\variousTests\Dapper\obj\Debug\DapperSample.csprojResolveAssemblyReference.cache
+C:\src\samples\net\variousTests\Dapper\obj\Debug\Dapper.exe
+C:\src\samples\net\variousTests\Dapper\obj\Debug\Dapper.pdb

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieStreaming", "..\..\..\Akka. Net\MovieStreaming\MovieStreaming.csproj", "{0583BBD4-B792-45EC-8C92-CBCED8193908}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieStreaming.Common", "..\..\..\Akka. Net\MovieStreaming.Common\MovieStreaming.Common.csproj", "{B742F0D3-2960-409F-8C51-2F3F84706D74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieStreaming.Remote", "..\..\..\Akka. Net\MovieStreaming.Remote\MovieStreaming.Remote.csproj", "{0D2AB7B1-69AE-4553-86DF-3A63B480A18E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0583BBD4-B792-45EC-8C92-CBCED8193908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0583BBD4-B792-45EC-8C92-CBCED8193908}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0583BBD4-B792-45EC-8C92-CBCED8193908}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0583BBD4-B792-45EC-8C92-CBCED8193908}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B742F0D3-2960-409F-8C51-2F3F84706D74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B742F0D3-2960-409F-8C51-2F3F84706D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B742F0D3-2960-409F-8C51-2F3F84706D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B742F0D3-2960-409F-8C51-2F3F84706D74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D2AB7B1-69AE-4553-86DF-3A63B480A18E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D2AB7B1-69AE-4553-86DF-3A63B480A18E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D2AB7B1-69AE-4553-86DF-3A63B480A18E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D2AB7B1-69AE-4553-86DF-3A63B480A18E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

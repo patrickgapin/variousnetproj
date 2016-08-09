@@ -5,6 +5,5 @@ C:\src\samples\net\variousTests\variousTests\VariousTests\Design Patterns\obj\De
 C:\src\samples\net\variousTests\variousTests\VariousTests\Design Patterns\obj\Debug\Design Patterns.pdb
 C:\src\samples\net\variousTests\Design Patterns\bin\Debug\Design Patterns.dll
 C:\src\samples\net\variousTests\Design Patterns\bin\Debug\Design Patterns.pdb
-C:\src\samples\net\variousTests\Design Patterns\obj\Debug\Design Patterns.csprojResolveAssemblyReference.cache
 C:\src\samples\net\variousTests\Design Patterns\obj\Debug\Design Patterns.dll
 C:\src\samples\net\variousTests\Design Patterns\obj\Debug\Design Patterns.pdb

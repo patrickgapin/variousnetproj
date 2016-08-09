@@ -26,7 +26,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJS - Hello", "Angula
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AKKA.NET", "AKKA.NET", "{1C85AC2E-8888-410D-A120-4869F5364E79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieStreaming", "Akka. Net\MovieStreaming.csproj", "{0583BBD4-B792-45EC-8C92-CBCED8193908}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieStreaming.Common", "Akka. Net\MovieStreaming.Common\MovieStreaming.Common.csproj", "{B742F0D3-2960-409F-8C51-2F3F84706D74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieStreaming", "Akka. Net\MovieStreaming\MovieStreaming.csproj", "{0583BBD4-B792-45EC-8C92-CBCED8193908}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieStreaming.Remote", "Akka. Net\MovieStreaming.Remote\MovieStreaming.Remote.csproj", "{0D2AB7B1-69AE-4553-86DF-3A63B480A18E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Windows Service with TopShelf", "Windows Service with TopShelf", "{E86AD70A-ECAD-4186-8B44-24508F7FA007}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileConverterService", "WindowsServiceWithTopShelf\FileConverterService.csproj", "{3863BCA8-FD40-482E-9F82-A2EFE559DE42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,16 +70,31 @@ Global
 		{BE76519B-E4AF-4268-B3BA-70E51BC6D339}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE76519B-E4AF-4268-B3BA-70E51BC6D339}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE76519B-E4AF-4268-B3BA-70E51BC6D339}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B742F0D3-2960-409F-8C51-2F3F84706D74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B742F0D3-2960-409F-8C51-2F3F84706D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B742F0D3-2960-409F-8C51-2F3F84706D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B742F0D3-2960-409F-8C51-2F3F84706D74}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0583BBD4-B792-45EC-8C92-CBCED8193908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0583BBD4-B792-45EC-8C92-CBCED8193908}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0583BBD4-B792-45EC-8C92-CBCED8193908}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0583BBD4-B792-45EC-8C92-CBCED8193908}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D2AB7B1-69AE-4553-86DF-3A63B480A18E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D2AB7B1-69AE-4553-86DF-3A63B480A18E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D2AB7B1-69AE-4553-86DF-3A63B480A18E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D2AB7B1-69AE-4553-86DF-3A63B480A18E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3863BCA8-FD40-482E-9F82-A2EFE559DE42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3863BCA8-FD40-482E-9F82-A2EFE559DE42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3863BCA8-FD40-482E-9F82-A2EFE559DE42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3863BCA8-FD40-482E-9F82-A2EFE559DE42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BE76519B-E4AF-4268-B3BA-70E51BC6D339} = {7154C8F5-8CF1-46D4-B6A8-C8F7D3366038}
+		{B742F0D3-2960-409F-8C51-2F3F84706D74} = {1C85AC2E-8888-410D-A120-4869F5364E79}
 		{0583BBD4-B792-45EC-8C92-CBCED8193908} = {1C85AC2E-8888-410D-A120-4869F5364E79}
+		{0D2AB7B1-69AE-4553-86DF-3A63B480A18E} = {1C85AC2E-8888-410D-A120-4869F5364E79}
+		{3863BCA8-FD40-482E-9F82-A2EFE559DE42} = {E86AD70A-ECAD-4186-8B44-24508F7FA007}
 	EndGlobalSection
 EndGlobal

@@ -3,3 +3,8 @@ C:\src\samples\net\variousTests\variousTests\VariousTests\Model\bin\Debug\Model.
 C:\src\samples\net\variousTests\variousTests\VariousTests\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 C:\src\samples\net\variousTests\variousTests\VariousTests\Model\obj\Debug\Model.dll
 C:\src\samples\net\variousTests\variousTests\VariousTests\Model\obj\Debug\Model.pdb
+C:\src\samples\net\variousTests\Model\bin\Debug\Model.dll
+C:\src\samples\net\variousTests\Model\bin\Debug\Model.pdb
+C:\src\samples\net\variousTests\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\src\samples\net\variousTests\Model\obj\Debug\Model.dll
+C:\src\samples\net\variousTests\Model\obj\Debug\Model.pdb
